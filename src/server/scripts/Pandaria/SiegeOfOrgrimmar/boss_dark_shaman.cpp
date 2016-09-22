@@ -1,63 +1,80 @@
 /*
-*	Copyright (C) 2016 - 20XX dule1322 <http://www.ac-web.org/forums/member.php?281853-dule1322>
+* Copyright (C) 2015-2016 JadeCore <https://github.com/cooler-SAI/JadeCore548-patched>
+* Copyright (C) 2008-2015 TrinityCore <http://www.trinitycore.org/>
+*
+* This program is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License as published by the
+* Free Software Foundation; either version 2 of the License, or (at your
+* option) any later version.
+*
+* This program is distributed in the hope that it will be useful, but WITHOUT
+* ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+* FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+* more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
 /*
-Earthbreaker Haromm - Spells
-
-Earthbreaker Haromm's basic ability is Froststorm Strike Froststorm Strike. 
-This deals high Frost damage to Haromm's tank, and affects them with a stacking debuff 
-that causes them to take 25% increased damage from Froststorm Strike for 30 seconds. 
-This debuff stacks. This ability requires a tank switch.
-
-When reaching 85% health, Haromm gains Toxic Mist Toxic Mist. 
-This is an undispellable 30-second DoT, cast on random raid members, that deals Nature damage 
-every 3 seconds. With each tick, the player also gains a stack of a debuff that increases their 
-Nature damage taken by 10%. This debuff wears off at the same time as the DoT. 
-The damage of Toxic Mist goes through all immunities.
-
-When reaching 65% health, Haromm gains Foul Stream Foul Stream. 
-This ability targets an area on the ground, in the shape of a long, wide line. 
-The area is marked with a green effect, and a few seconds later, any players standing 
-there take high Nature damage. Haromm casts Foul Stream roughly every 30 seconds.
-
-When reaching 50% health, Haromm gains Ashen Wall Ashen Wall. 
-This summons a wall of stationary Ash Elementals that attack players who are in 
-their melee range for very high amounts of damage. The Elementals cannot be 
-tanked or killed, and they last for a very long time (possibly indefinitely). 
-The ability is cast roughly every 30 seconds.
+	Earthbreaker Haromm - Spells
+	
+	Earthbreaker Haromm's basic ability is Froststorm Strike Froststorm Strike. 
+	This deals high Frost damage to Haromm's tank, and affects them with a stacking debuff 
+	that causes them to take 25% increased damage from Froststorm Strike for 30 seconds. 
+	This debuff stacks. This ability requires a tank switch.
+	
+	When reaching 85% health, Haromm gains Toxic Mist Toxic Mist. 
+	This is an undispellable 30-second DoT, cast on random raid members, that deals Nature damage 
+	every 3 seconds. With each tick, the player also gains a stack of a debuff that increases their 
+	Nature damage taken by 10%. This debuff wears off at the same time as the DoT. 
+	The damage of Toxic Mist goes through all immunities.
+	
+	When reaching 65% health, Haromm gains Foul Stream Foul Stream. 
+	This ability targets an area on the ground, in the shape of a long, wide line. 
+	The area is marked with a green effect, and a few seconds later, any players standing 
+	there take high Nature damage. Haromm casts Foul Stream roughly every 30 seconds.
+	
+	When reaching 50% health, Haromm gains Ashen Wall Ashen Wall. 
+	This summons a wall of stationary Ash Elementals that attack players who are in 
+	their melee range for very high amounts of damage. The Elementals cannot be 
+	tanked or killed, and they last for a very long time (possibly indefinitely). 
+	The ability is cast roughly every 30 seconds.
 */
 
 /*
-Wavebinder Kardris - Spells
-
-Wavebinder Kardris' basic ability is Froststorm Bolt Froststorm Bolt. 
-This is an uninterruptible nuke that Kardris regularly casts on his tank. 
-It deals a very high amount of Frost damage.
-
-When reaching 85% health, Kardris gains Toxic Storm Toxic Storm. 
-This ability summons a cloud that moves slowly around the arena, 
-dealing damage to any players who are under it. Moreover, the cloud regularly 
-creates Toxic Tornadoes, which also move around the arena, dealing damage to any 
-players they touch, and knocking them up slightly. The ability is cast roughly every 30 seconds, 
-and each cloud lasts for about 90 seconds, meaning that it eventually leads to spacial constraints.
-
-When reaching 65% health, Kardris gains Foul Geyser Foul Geyser. 
-Kardris channels Foul Geyser for 8 seconds, dealing damage to any players 
-around him and summoning many adds called Foul Slimes. The Foul Slime adds 
-can be tanked, and they have an aura that constantly deals Nature damage to 
-any players within 3 yards of them. Foul Geyser is cast roughly every 30 seconds.
-
-When reaching 50% health, Kardris gains Falling Ash Falling Ash. 
-This ability targets a large area on the ground, marking it with a 
-red effect. About 15 seconds later, a fiery projectile will land in this area, 
-dealing lethal damage to anyone inside it, as well as a moderate amount of raid-wide Fire damage. 
-The ability is cast roughly every 30 seconds.
+	Wavebinder Kardris - Spells
+	
+	Wavebinder Kardris' basic ability is Froststorm Bolt Froststorm Bolt. 
+	This is an uninterruptible nuke that Kardris regularly casts on his tank. 
+	It deals a very high amount of Frost damage.
+	
+	When reaching 85% health, Kardris gains Toxic Storm Toxic Storm. 
+	This ability summons a cloud that moves slowly around the arena, 
+	dealing damage to any players who are under it. Moreover, the cloud regularly 
+	creates Toxic Tornadoes, which also move around the arena, dealing damage to any 
+	players they touch, and knocking them up slightly. The ability is cast roughly every 30 seconds, 
+	and each cloud lasts for about 90 seconds, meaning that it eventually leads to spacial constraints.
+	
+	When reaching 65% health, Kardris gains Foul Geyser Foul Geyser. 
+	Kardris channels Foul Geyser for 8 seconds, dealing damage to any players 
+	around him and summoning many adds called Foul Slimes. The Foul Slime adds 
+	can be tanked, and they have an aura that constantly deals Nature damage to 
+	any players within 3 yards of them. Foul Geyser is cast roughly every 30 seconds.
+	
+	When reaching 50% health, Kardris gains Falling Ash Falling Ash. 
+	This ability targets a large area on the ground, marking it with a 
+	red effect. About 15 seconds later, a fiery projectile will land in this area, 
+	dealing lethal damage to anyone inside it, as well as a moderate amount of raid-wide Fire damage. 
+	The ability is cast roughly every 30 seconds.
 */
 
 /*
-	NM mode == 100%
-	HC mode == 80% Iron Tomb and Iron Prison are not coded
+	10 NM mode == 100%
+	10 HC mode == 100%
+
+	25 NM mode - not tested
+	25 HC mode - not tested
 */
 
 #include "siege_of_orgrimmar.h"
@@ -97,6 +114,11 @@ enum Spells
 	SPELL_FALLING_ASH_VISUAL	= 143986, // Visual falling
 	SPELL_FALLING_ASH_EXPLOSION	= 143987, // Damage
 
+	// Heroic mode spells
+	SPELL_IRON_TOMB				= 144334,
+	SPELL_IRON_PRISON			= 144330,
+	SPELL_IRON_PRISON_DAMAGE	= 144331,
+
 	// Darkfang and Bloodclaw spells
 	SPELL_SWIPE					= 144303,
 	SPELL_REND					= 144304,
@@ -106,6 +128,10 @@ enum Spells
 	SPELL_FOULSTREAM_TOTEM		= 144289,
 	SPELL_ASHFLARE_TOTEM		= 144290,
 	SPELL_RUSTED_IRON_TOTEM		= 144291,
+
+	// Spirit Link
+	SPELL_SPIRIT_LINK_HAROMM	= 144227,
+	SPELL_SPIRIT_LINK_KARDRIS	= 144226,
 };
 
 enum TalksHaromm
@@ -126,10 +152,10 @@ enum TalksKardris
 	TALK_INTRO_KARDRIS_ONE		= 0, // Earth! - Second (39016)
 	TALK_INTRO_KARDRIS_TWO		= 1, // Bend to our will! - Fourth - No Sound
 	TALK_INTRO_KARDRIS_THREE	= 2, // We do not ask elements for aid! (39014)
-	TALK_SPELL_KARDRIS_ONE		= 3, // Tortured wind, stale and toxic (39018)
-	TALK_SPELL_KARDRIS_TWO		= 4, // Long dead fire, black and smouldering (39019)
+	TALK_SPELL_KARDRIS_ONE		= 3, // Tortured wind, stale and toxic! (39018)
+	TALK_SPELL_KARDRIS_TWO		= 4, // Long dead fire, black and smouldering! (39019)
 	TALK_DEATH_KARDRIS			= 5, // I can hear them... No longer... (39015)
-	TALK_KILL_KARDRIS			= 6, // Ha Ha Ha, my wolf will feast on your blood (39017)
+	TALK_KILL_KARDRIS			= 6, // Ha Ha Ha, my wolfs will feast on your blood! (39017)
 };
 
 enum Events
@@ -195,9 +221,35 @@ enum Creatures
 	CREATURE_ASHFLARE_TOTEM		= 71917,
 	CREATURE_POISONMIST_TOTEM	= 71915,
 	CREATURE_RUSTED_IRON_TOTEM	= 71918,
+
+	CREATURE_DARKFANG			= 71921,
+	CREATURE_BLOODCLAW			= 71923,
+};
+
+enum Phases
+{
+	PHASE_ONE	= 1,
+	PHASE_TWO	= 2,
+	PHASE_THREE	= 3,
+	PHASE_FOUR	= 4,
+	PHASE_FIVE	= 5,
+};
+
+enum Gameobjects
+{
+	GOBJECT_IRON_TOMB	= 220864,
 };
 
 #define FLOOR_Z 21.0f
+
+/*
+void FallingAshPosition()
+{
+	InstanceScript* instance;
+
+	if (Creature* kardris = instance->instance->GetCreature(instance->GetData64(DATA_WAVEBINDER_KARDRIS))
+
+}*/
 
 static void DespawnCreaturesInArea(uint32 entry, WorldObject* object)
 {
@@ -218,9 +270,20 @@ class boss_earthbreaker_haromm : public CreatureScript
 
 		struct boss_earthbreaker_harommAI : public BossAI
 		{
-			boss_earthbreaker_harommAI(Creature* creature) : BossAI(creature, DATA_DARK_SHAMANS)
+			boss_earthbreaker_harommAI(Creature* creature) : BossAI(creature, DATA_EARTHBREAKER_HAROMM)
 			{
 				m_Instance = creature->GetInstanceScript();
+				me->ApplySpellImmune(0, IMMUNITY_EFFECT, SPELL_EFFECT_KNOCK_BACK, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_GRIP, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_STUN, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_FEAR, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_ROOT, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_FREEZE, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_POLYMORPH, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_HORROR, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_SAPPED, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_CHARM, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_DISORIENTED, true);
 			}
 
 			InstanceScript* m_Instance;
@@ -263,15 +326,15 @@ class boss_earthbreaker_haromm : public CreatureScript
 						break;
 				}
 
-				me->SetHealth(me->GetMaxHealth());
-				m_Instance->SetData(DATA_DARK_SHAMANS_HEALTH, me->GetMaxHealth());
+				me->SetReactState(ReactStates::REACT_AGGRESSIVE);
 
 				me->setFaction(16);
+				DoCast(me, SPELL_SPIRIT_LINK_HAROMM);
 			}
 
-			void DamageTaken(Unit* /*attacker*/, uint32& damage)
+			void DamageTaken(Unit* attacker, uint32& damage)
 			{
-				m_Instance->SetData(DATA_DARK_SHAMANS_HEALTH, me->GetHealth() > damage ? me->GetHealth() - damage : 0);
+				
 			}
 
 			void JustReachedHome()
@@ -280,7 +343,7 @@ class boss_earthbreaker_haromm : public CreatureScript
 
 				if (m_Instance)
 				{
-					m_Instance->SetBossState(DATA_DARK_SHAMANS, FAIL);
+					m_Instance->SetBossState(DATA_EARTHBREAKER_HAROMM, FAIL);
 				}
 
 				int32 Creatures[9] =
@@ -298,6 +361,23 @@ class boss_earthbreaker_haromm : public CreatureScript
 
 				for (int i = 0; i <= 8; i++)
 					DespawnCreaturesInArea(Creatures[i], me);
+
+				int32 gobjects[1] =
+				{
+					GOBJECT_IRON_TOMB
+				};
+
+				if (Creature* Darkfang = me->FindNearestCreature(CREATURE_DARKFANG, 500.0f, true))
+					if (Creature* Bloodclaw = me->FindNearestCreature(CREATURE_BLOODCLAW, 500.0f, true))
+					{
+						Darkfang->AI()->Reset();
+						Darkfang->Respawn();
+						Darkfang->GetMotionMaster()->MovePoint(0, Darkfang->GetHomePosition().GetPositionX(), Darkfang->GetHomePosition().GetPositionY(), Darkfang->GetHomePosition().GetPositionZ());
+
+						Bloodclaw->AI()->Reset();
+						Bloodclaw->Respawn();
+						Bloodclaw->GetMotionMaster()->MovePoint(0, Bloodclaw->GetHomePosition().GetPositionX(), Bloodclaw->GetHomePosition().GetPositionY(), Bloodclaw->GetHomePosition().GetPositionZ());
+					}
 			}
 
 			void KilledUnit(Unit* who)
@@ -306,14 +386,21 @@ class boss_earthbreaker_haromm : public CreatureScript
 					Talk(TALK_KILL_HAROMM);
 			}
 
-			void EnterCombat()
+			void EnterCombat(Unit* who)
 			{
-				m_Instance->SetData(DATA_DARK_SHAMANS_HEALTH, me->GetMaxHealth());
-				m_Instance->SetBossState(DATA_DARK_SHAMANS, IN_PROGRESS);
+				_EnterCombat();
+				m_Instance->SendEncounterUnit(ENCOUNTER_FRAME_ENGAGE, me);
 
+				events.SetPhase(PHASE_ONE);
 				Talk(TALK_INTRO_HAROMM_ONE);
-				events.ScheduleEvent(EVENT_FROSTSTORM_STRIKE, 7000);
-				events.ScheduleEvent(EVENT_TALK_HAROMM_TWO, 4000);
+				events.ScheduleEvent(EVENT_FROSTSTORM_STRIKE, 7000, 0, PHASE_ONE);
+				events.ScheduleEvent(EVENT_TALK_HAROMM_TWO, 4000, 0, PHASE_ONE);
+
+				if (me->GetMap()->IsHeroic())
+				{ 
+					DoCast(SPELL_RUSTED_IRON_TOTEM);
+					events.ScheduleEvent(EVENT_IRON_TOMB, 30000, 0, PHASE_ONE);
+				}
 			}
 
 			void JustDied(Unit* killer)
@@ -323,10 +410,8 @@ class boss_earthbreaker_haromm : public CreatureScript
 				Talk(TALK_DEATH_HAROMM);
 				if (m_Instance)
 				{
-					m_Instance->SetBossState(DATA_DARK_SHAMANS, DONE);
+					m_Instance->SetBossState(DATA_EARTHBREAKER_HAROMM, DONE);
 				}
-
-				m_Instance->SetData(DATA_DARK_SHAMANS_HEALTH, 0);
 
 				int32 Creatures[9] =
 				{
@@ -353,50 +438,73 @@ class boss_earthbreaker_haromm : public CreatureScript
 				if (me->HasUnitState(UNIT_STATE_CASTING))
 					return;
 
-				if (instance->GetData(DATA_DARK_SHAMANS_HEALTH) != 0)
-					me->SetHealth(instance->GetData(DATA_DARK_SHAMANS_HEALTH));
+				events.Update(diff);
 
-				if (me->GetMap()->IsHeroic() && HealthBelowPct(95))
+				if (HealthBelowPct(85) && events.IsInPhase(PHASE_ONE))
 				{
-					DoCast(SPELL_RUSTED_IRON_TOTEM);
-					events.ScheduleEvent(EVENT_IRON_TOMB, 1);
-				}
-
-				if (HealthBelowPct(85))
-				{
+					events.Reset();
 					DoCast(SPELL_POISONMIST_TOTEM);
-					events.ScheduleEvent(EVENT_TOXIC_MIST, 1);
+					events.SetPhase(PHASE_TWO);
+					events.RescheduleEvent(EVENT_FROSTSTORM_STRIKE, 7000, 0, PHASE_TWO);
+					events.ScheduleEvent(EVENT_TOXIC_MIST, 1000, 0, PHASE_TWO);
+
+					if (me->GetMap()->IsHeroic())
+						events.ScheduleEvent(EVENT_IRON_TOMB, 0, 30000, PHASE_TWO);
 				}
 
-				if (HealthBelowPct(65))
+				if (HealthBelowPct(65) && events.IsInPhase(PHASE_TWO))
 				{
+					events.Reset();
 					DoCast(SPELL_FOULSTREAM_TOTEM);
-					Talk(TALK_SPELL_HAROMM_ONE);
-					events.ScheduleEvent(EVENT_FOUL_STREAM, 1);
+					events.SetPhase(PHASE_THREE);
+					events.RescheduleEvent(EVENT_FROSTSTORM_STRIKE, 7000, 0, PHASE_THREE);
+					events.RescheduleEvent(EVENT_TOXIC_MIST, 30000, 0, PHASE_THREE);
+					events.ScheduleEvent(EVENT_FOUL_STREAM, 1000, 0, PHASE_THREE);
+
+					if (me->GetMap()->IsHeroic())
+						events.ScheduleEvent(EVENT_IRON_TOMB, 0, 30000, PHASE_THREE);
 				}
 
-				if (HealthBelowPct(50))
+				if (HealthBelowPct(50) && events.IsInPhase(PHASE_THREE))
 				{
+					events.Reset();
 					DoCast(SPELL_ASHFLARE_TOTEM);
-					events.ScheduleEvent(EVENT_ASHEN_WALL, 1);
+					events.SetPhase(PHASE_FOUR);
+					events.RescheduleEvent(EVENT_FROSTSTORM_STRIKE, 7000, 0, PHASE_FOUR);
+					events.RescheduleEvent(EVENT_TOXIC_MIST, 25000, 0, PHASE_FOUR);
+					events.RescheduleEvent(EVENT_FOUL_STREAM, 30000, 0, PHASE_FOUR);
+					events.ScheduleEvent(EVENT_ASHEN_WALL, 1000, 0, PHASE_FOUR);
+
+					if (me->GetMap()->IsHeroic())
+						events.ScheduleEvent(EVENT_IRON_TOMB, 0, 30000, PHASE_FOUR);
 				}
 
-				if (HealthBelowPct(25))
-					events.ScheduleEvent(EVENT_BLOODLUST, 1);
+				if (HealthBelowPct(25) && events.IsInPhase(PHASE_FOUR))
+				{
+					events.SetPhase(PHASE_FIVE);
+					events.RescheduleEvent(EVENT_FROSTSTORM_STRIKE, 7000, 0, PHASE_FIVE);
+					events.RescheduleEvent(EVENT_TOXIC_MIST, 20000, 0, PHASE_FIVE);
+					events.RescheduleEvent(EVENT_FOUL_STREAM, 25000, 0, PHASE_FIVE);
+					events.RescheduleEvent(EVENT_ASHEN_WALL, 30000, 0, PHASE_FIVE);
+					events.ScheduleEvent(EVENT_BLOODLUST, 1000, 0, PHASE_FIVE);
+
+					if (me->GetMap()->IsHeroic())
+						events.ScheduleEvent(EVENT_IRON_TOMB, 0, 35000, PHASE_FIVE);
+				}
 
 				switch (events.ExecuteEvent())
 				{
 					case EVENT_TALK_HAROMM_TWO:
 					{
 						Talk(TALK_INTRO_HAROMM_TWO);
-						events.ScheduleEvent(EVENT_TALK_HAROMM_THREE, 7000);
+						events.ScheduleEvent(EVENT_TALK_HAROMM_THREE, 7000, 0, PHASE_ONE);
 						break;
 					}
 
 					case EVENT_TALK_HAROMM_THREE:
 					{
 						Talk(TALK_INTRO_HAROMM_THREE);
-						events.ScheduleEvent(EVENT_TALK_HAROMM_FOUR, 16000);
+						events.ScheduleEvent(EVENT_TALK_HAROMM_FOUR, 16000, 0, PHASE_ONE);
 						break;
 					}
 
@@ -408,32 +516,55 @@ class boss_earthbreaker_haromm : public CreatureScript
 
 					case EVENT_FROSTSTORM_STRIKE:
 					{
-						DoCastVictim(SPELL_FROSTSTORM_STRIKE);
-						events.ScheduleEvent(EVENT_FROSTSTORM_STRIKE, 7000);
+						DoCastVictim(SPELL_FROSTSTORM_STRIKE, true);
+						if (events.IsInPhase(PHASE_ONE))
+							events.ScheduleEvent(EVENT_FROSTSTORM_STRIKE, 7000, 0, PHASE_ONE);
+						else if (events.IsInPhase(PHASE_TWO))
+							events.ScheduleEvent(EVENT_FROSTSTORM_STRIKE, 7000, 0, PHASE_TWO);
+						else if (events.IsInPhase(PHASE_THREE))
+							events.ScheduleEvent(EVENT_FROSTSTORM_STRIKE, 7000, 0, PHASE_THREE);
+						else if (events.IsInPhase(PHASE_FOUR))
+							events.ScheduleEvent(EVENT_FROSTSTORM_STRIKE, 7000, 0, PHASE_FOUR);
+						else if (events.IsInPhase(PHASE_FIVE))
+							events.ScheduleEvent(EVENT_FROSTSTORM_STRIKE, 7000, 0, PHASE_FIVE);
 						break;
 					}
 
 					case EVENT_TOXIC_MIST:
 					{
-						if (Unit* target_one = SelectTarget(SelectAggroTarget::SELECT_TARGET_RANDOM, 0, 100.0f, true))
+						if (Unit* target_one = SelectTarget(SelectAggroTarget::SELECT_TARGET_RANDOM, 0, 40.0f, true))
 						{
-							me->CastSpell(target_one, SPELL_TOXIC_MIST);
+							DoCast(target_one, SPELL_TOXIC_MIST);
 						}
-						if (Unit* target_two = SelectTarget(SelectAggroTarget::SELECT_TARGET_RANDOM, 0, 100.0f, true))
+						if (Unit* target_two = SelectTarget(SelectAggroTarget::SELECT_TARGET_RANDOM, 0, 40.0f, true))
 						{
-							me->CastSpell(target_two, SPELL_TOXIC_MIST);
+							DoCast(target_two, SPELL_TOXIC_MIST);
 						}
-						events.ScheduleEvent(EVENT_TOXIC_MIST, 30000);
+
+						if (events.IsInPhase(PHASE_TWO))
+							events.ScheduleEvent(EVENT_TOXIC_MIST, 30000, 0, PHASE_TWO);
+						else if (events.IsInPhase(PHASE_THREE))
+							events.ScheduleEvent(EVENT_TOXIC_MIST, 30000, 0, PHASE_THREE);
+						else if (events.IsInPhase(PHASE_FOUR))
+							events.ScheduleEvent(EVENT_TOXIC_MIST, 30000, 0, PHASE_FOUR);
+						else if (events.IsInPhase(PHASE_FIVE))
+							events.ScheduleEvent(EVENT_TOXIC_MIST, 30000, 0, PHASE_FIVE);
 						break;
 					}
 
 					case EVENT_FOUL_STREAM:
 					{
-						if (Unit* target = SelectTarget(SelectAggroTarget::SELECT_TARGET_RANDOM, 0, 100.0f, true))
+						if (Unit* target = SelectTarget(SelectAggroTarget::SELECT_TARGET_RANDOM, 0, 40.0f, true))
 						{
-							me->CastSpell(target, SPELL_TOXIC_MIST);
+							me->CastSpell(target, SPELL_FOUL_STREAM);
 						}
-						events.ScheduleEvent(EVENT_FOUL_STREAM, 30000);
+
+						if (events.IsInPhase(PHASE_THREE))
+							events.ScheduleEvent(EVENT_FOUL_STREAM, 30000, 0, PHASE_THREE);
+						else if (events.IsInPhase(PHASE_FOUR))
+							events.ScheduleEvent(EVENT_FOUL_STREAM, 30000, 0, PHASE_FOUR);
+						else if (events.IsInPhase(PHASE_FIVE))
+							events.ScheduleEvent(EVENT_FOUL_STREAM, 30000, 0, PHASE_FIVE);
 						break;
 					}
 
@@ -444,25 +575,29 @@ class boss_earthbreaker_haromm : public CreatureScript
 						float posZ = me->GetPositionZ();
 						float O = me->GetOrientation();
 						Position position[11] =
-						{ 
-							{ posX+25.0f, posY+25.0f, posZ, O },
-							{ posX+20.0f, posY+20.0f, posZ, O },
-							{ posX+15.0f, posY+15.0f, posZ, O },
-							{ posX+10.0f, posY+10.0f, posZ, O },
-							{ posX+5.0f, posY+5.0f, posZ, O },
+						{
+							{ posX + 12.5f, posY + 12.5f, posZ, O },
+							{ posX + 10.0f, posY + 10.0f, posZ, O },
+							{ posX + 7.5f, posY + 7.5f, posZ, O },
+							{ posX + 5.0f, posY + 5.0f, posZ, O },
+							{ posX + 2.5f, posY + 2.5f, posZ, O },
 							{ posX, posY, posZ, O },
-							{ posX-5.0f, posY-5.0f, posZ, O },
-							{ posX-10.0f, posY-10.0f, posZ, O },
-							{ posX-15.0f, posY-15.0f, posZ, O },
-							{ posX-20.0f, posY-20.0f, posZ, O },
-							{ posX-25.0f, posY-25.0f, posZ, O },
+							{ posX - 2.5f, posY - 2.5f, posZ, O },
+							{ posX - 5.0f, posY - 5.0f, posZ, O },
+							{ posX - 7.5f, posY - 7.5f, posZ, O },
+							{ posX - 10.0f, posY - 10.0f, posZ, O },
+							{ posX - 12.5f, posY - 12.5f, posZ, O },
 						};
 
 						for (int i = 0; i < 11; i++)
 						{
 							me->SummonCreature(71827, position[i], TEMPSUMMON_MANUAL_DESPAWN);
 						}
-						events.ScheduleEvent(EVENT_ASHEN_WALL, 30000);
+						
+						if (events.IsInPhase(PHASE_FOUR))
+							events.ScheduleEvent(EVENT_ASHEN_WALL, 30000, 0, PHASE_FOUR);
+						else if (events.IsInPhase(PHASE_FIVE))
+							events.ScheduleEvent(EVENT_ASHEN_WALL, 30000, 0, PHASE_FIVE);
 						break;
 					}
 
@@ -474,7 +609,21 @@ class boss_earthbreaker_haromm : public CreatureScript
 
 					case EVENT_IRON_TOMB:
 					{
-						events.ScheduleEvent(EVENT_IRON_TOMB, 30000);
+						if (Unit* target = SelectTarget(SelectAggroTarget::SELECT_TARGET_RANDOM, 0, 40.0f, true))
+						{
+							me->CastSpell(target, SPELL_IRON_TOMB);
+						}
+
+						if (events.IsInPhase(PHASE_ONE))
+							events.ScheduleEvent(EVENT_IRON_TOMB, 30000, 0, PHASE_ONE);
+						else if (events.IsInPhase(PHASE_TWO))
+							events.ScheduleEvent(EVENT_IRON_TOMB, 30000, 0, PHASE_TWO);
+						else if (events.IsInPhase(PHASE_THREE))
+							events.ScheduleEvent(EVENT_IRON_TOMB, 30000, 0, PHASE_THREE);
+						else if (events.IsInPhase(PHASE_FOUR))
+							events.ScheduleEvent(EVENT_IRON_TOMB, 30000, 0, PHASE_FOUR);
+						else if (events.IsInPhase(PHASE_FIVE))
+							events.ScheduleEvent(EVENT_IRON_TOMB, 30000, 0, PHASE_FIVE);
 						break;
 					}
 					default:
@@ -499,9 +648,20 @@ class boss_wavebinder_kardris : public CreatureScript
 
 		struct boss_wavebinder_kardrisAI : public BossAI
 		{
-			boss_wavebinder_kardrisAI(Creature* creature) : BossAI(creature, DATA_DARK_SHAMANS)
+			boss_wavebinder_kardrisAI(Creature* creature) : BossAI(creature, DATA_WAVEBINDER_KARDRIS)
 			{
 				m_Instance = creature->GetInstanceScript();
+				me->ApplySpellImmune(0, IMMUNITY_EFFECT, SPELL_EFFECT_KNOCK_BACK, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_GRIP, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_STUN, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_FEAR, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_ROOT, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_FREEZE, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_POLYMORPH, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_HORROR, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_SAPPED, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_CHARM, true);
+				me->ApplySpellImmune(0, IMMUNITY_MECHANIC, MECHANIC_DISORIENTED, true);
 			}
 
 			InstanceScript* m_Instance;
@@ -544,15 +704,15 @@ class boss_wavebinder_kardris : public CreatureScript
 						break;
 				}
 
-				me->SetHealth(me->GetMaxHealth());
-				m_Instance->SetData(DATA_DARK_SHAMANS_HEALTH, me->GetMaxHealth());
+				me->SetReactState(ReactStates::REACT_AGGRESSIVE);
 
 				me->setFaction(16);
+				DoCast(me, SPELL_SPIRIT_LINK_KARDRIS);
 			}
 
-			void DamageTaken(Unit* /*attacker*/, uint32& damage)
+			void DamageTaken(Unit* attacker, uint32& damage)
 			{
-				m_Instance->SetData(DATA_DARK_SHAMANS_HEALTH, me->GetHealth() > damage ? me->GetHealth() - damage : 0);
+				
 			}
 
 			void JustReachedHome()
@@ -561,7 +721,7 @@ class boss_wavebinder_kardris : public CreatureScript
 
 				if (m_Instance)
 				{
-					m_Instance->SetBossState(DATA_DARK_SHAMANS, FAIL);
+					m_Instance->SetBossState(DATA_WAVEBINDER_KARDRIS, FAIL);
 				}
 
 				int32 Creatures[9] =
@@ -579,6 +739,18 @@ class boss_wavebinder_kardris : public CreatureScript
 
 				for (int i = 0; i <= 8; i++)
 					DespawnCreaturesInArea(Creatures[i], me);
+
+				if (Creature* Darkfang = me->FindNearestCreature(CREATURE_DARKFANG, 500.0f, true))
+					if (Creature* Bloodclaw = me->FindNearestCreature(CREATURE_BLOODCLAW, 500.0f, true))
+					{
+						Darkfang->AI()->Reset();
+						Darkfang->Respawn();
+						Darkfang->GetMotionMaster()->MovePoint(0, Darkfang->GetHomePosition().GetPositionX(), Darkfang->GetHomePosition().GetPositionY(), Darkfang->GetHomePosition().GetPositionZ());
+
+						Bloodclaw->AI()->Reset();
+						Bloodclaw->Respawn();
+						Bloodclaw->GetMotionMaster()->MovePoint(0, Bloodclaw->GetHomePosition().GetPositionX(), Bloodclaw->GetHomePosition().GetPositionY(), Bloodclaw->GetHomePosition().GetPositionZ());
+					}
 			}
 
 			void KilledUnit(Unit* who)
@@ -587,13 +759,17 @@ class boss_wavebinder_kardris : public CreatureScript
 					Talk(TALK_KILL_KARDRIS);
 			}
 
-			void EnterCombat()
+			void EnterCombat(Unit* /*who*/)
 			{
-				m_Instance->SetData(DATA_DARK_SHAMANS_HEALTH, me->GetMaxHealth());
-				m_Instance->SetBossState(DATA_DARK_SHAMANS, IN_PROGRESS);
+				_EnterCombat();
+				m_Instance->SendEncounterUnit(ENCOUNTER_FRAME_ENGAGE, me);
 
-				events.ScheduleEvent(EVENT_FROSTSTORM_BOLT, 7000);
-				events.ScheduleEvent(EVENT_TALK_KARDRIS_ONE, 2000);
+				events.SetPhase(PHASE_ONE);
+				events.ScheduleEvent(EVENT_FROSTSTORM_BOLT, 7000, 0, PHASE_ONE);
+				events.ScheduleEvent(EVENT_TALK_KARDRIS_ONE, 2000, 0, PHASE_ONE);
+				
+				if (me->GetMap()->IsHeroic())
+					events.ScheduleEvent(EVENT_IRON_PRISON, 30000, 0, PHASE_ONE);
 			}
 
 			void JustDied(Unit* killer)
@@ -603,10 +779,8 @@ class boss_wavebinder_kardris : public CreatureScript
 				Talk(TALK_DEATH_KARDRIS);
 				if (m_Instance)
 				{
-					m_Instance->SetBossState(DATA_DARK_SHAMANS, DONE);
+					m_Instance->SetBossState(DATA_WAVEBINDER_KARDRIS, DONE);
 				}
-
-				m_Instance->SetData(DATA_DARK_SHAMANS_HEALTH, 0);
 
 				int32 Creatures[9] =
 				{
@@ -633,50 +807,72 @@ class boss_wavebinder_kardris : public CreatureScript
 				if (me->HasUnitState(UNIT_STATE_CASTING))
 					return;
 
-				if (instance->GetData(DATA_DARK_SHAMANS_HEALTH) != 0)
-					me->SetHealth(instance->GetData(DATA_DARK_SHAMANS_HEALTH));
+				events.Update(diff);
 
-				if (me->GetMap()->IsHeroic() && HealthBelowPct(95))
+				if (HealthBelowPct(85) && events.IsInPhase(PHASE_ONE))
 				{
-					DoCast(SPELL_RUSTED_IRON_TOTEM);
-					events.ScheduleEvent(EVENT_IRON_PRISON, 1);
-				}
-
-				if (HealthBelowPct(85))
-				{
+					events.Reset();
 					DoCast(SPELL_POISONMIST_TOTEM);
-					Talk(TALK_SPELL_KARDRIS_ONE);
-					events.ScheduleEvent(EVENT_TOXIC_STORM, 1);
+					events.SetPhase(PHASE_TWO);
+					events.RescheduleEvent(EVENT_FROSTSTORM_BOLT, 7000, 0, PHASE_TWO);
+					events.ScheduleEvent(EVENT_TOXIC_STORM, 1000, 0, PHASE_TWO);
+
+					if (me->GetMap()->IsHeroic())
+						events.ScheduleEvent(EVENT_IRON_PRISON, 30000, 0, PHASE_TWO);
 				}
 
-				if (HealthBelowPct(65))
+				if (HealthBelowPct(65) && events.IsInPhase(PHASE_TWO))
 				{
+					events.Reset();
 					DoCast(SPELL_FOULSTREAM_TOTEM);
-					events.ScheduleEvent(EVENT_FOUL_GEYSER, 1);
+					events.SetPhase(PHASE_THREE);
+					events.RescheduleEvent(EVENT_FROSTSTORM_BOLT, 7000, 0, PHASE_THREE);
+					events.RescheduleEvent(EVENT_TOXIC_STORM, 25000, 0, PHASE_THREE);
+					events.ScheduleEvent(EVENT_FOUL_GEYSER, 1000, 0, PHASE_THREE);
+
+					if (me->GetMap()->IsHeroic())
+						events.ScheduleEvent(EVENT_IRON_PRISON, 30000, 0, PHASE_TWO);
 				}
 
-				if (HealthBelowPct(50))
+				if (HealthBelowPct(50) && events.IsInPhase(PHASE_THREE))
 				{
+					events.Reset();
 					DoCast(SPELL_ASHFLARE_TOTEM);
-					Talk(TALK_SPELL_KARDRIS_TWO);
-					events.ScheduleEvent(EVENT_FALLING_ASH, 1);
+					events.SetPhase(PHASE_FOUR);
+					events.RescheduleEvent(EVENT_FROSTSTORM_BOLT, 7000, 0, PHASE_FOUR);
+					events.RescheduleEvent(EVENT_TOXIC_STORM, 20000, 0, PHASE_FOUR);
+					events.RescheduleEvent(EVENT_FOUL_GEYSER, 25000, 0, PHASE_FOUR);
+					// events.ScheduleEvent(EVENT_FALLING_ASH, 1000, 0, PHASE_FOUR);
+
+					if (me->GetMap()->IsHeroic())
+						events.ScheduleEvent(EVENT_IRON_PRISON, 30000, 0, PHASE_ONE);
 				}
 
-				if (HealthBelowPct(25))
-					events.ScheduleEvent(EVENT_BLOODLUST, 1);
+				if (HealthBelowPct(25) && events.IsInPhase(PHASE_FOUR))
+				{
+					events.SetPhase(PHASE_FIVE);
+					events.RescheduleEvent(EVENT_FROSTSTORM_BOLT, 7000, 0, PHASE_FIVE);
+					events.RescheduleEvent(EVENT_TOXIC_STORM, 20000, 0, PHASE_FIVE);
+					events.RescheduleEvent(EVENT_FOUL_GEYSER, 25000, 0, PHASE_FIVE);
+					// events.RescheduleEvent(EVENT_FALLING_ASH, 35000, 0, PHASE_FIVE);
+					events.ScheduleEvent(EVENT_BLOODLUST, 1000, 0, PHASE_FIVE);
+
+					if (me->GetMap()->IsHeroic())
+						events.ScheduleEvent(EVENT_IRON_PRISON, 30000, 0, PHASE_ONE);
+				}
 
 				switch (events.ExecuteEvent())
 				{
 					case EVENT_TALK_KARDRIS_ONE:
 					{
 						Talk(TALK_INTRO_KARDRIS_ONE);
-						events.ScheduleEvent(EVENT_TALK_KARDRIS_TWO, 7000);
+						events.ScheduleEvent(EVENT_TALK_KARDRIS_TWO, 7000, 0, PHASE_ONE);
 						break;
 					}
 					case EVENT_TALK_KARDRIS_TWO:
 					{
 						Talk(TALK_INTRO_KARDRIS_TWO);
-						events.ScheduleEvent(EVENT_TALK_KARDRIS_THREE, 12000);
+						events.ScheduleEvent(EVENT_TALK_KARDRIS_THREE, 12000, 0, PHASE_ONE);
 						break;
 					}
 
@@ -689,41 +885,62 @@ class boss_wavebinder_kardris : public CreatureScript
 					case EVENT_FROSTSTORM_BOLT:
 					{
 						DoCastVictim(SPELL_FROSTSTORM_BOLT);
-						events.ScheduleEvent(EVENT_FROSTSTORM_BOLT, 7000);
+
+						if (events.IsInPhase(PHASE_ONE))
+							events.ScheduleEvent(EVENT_FROSTSTORM_BOLT, 7000, 0, PHASE_ONE);
+						else if (events.IsInPhase(PHASE_TWO))
+							events.ScheduleEvent(EVENT_FROSTSTORM_BOLT, 7000, 0, PHASE_TWO);
+						else if (events.IsInPhase(PHASE_THREE))
+							events.ScheduleEvent(EVENT_FROSTSTORM_BOLT, 7000, 0, PHASE_THREE);
+						else if (events.IsInPhase(PHASE_FOUR))
+							events.ScheduleEvent(EVENT_FROSTSTORM_BOLT, 7000, 0, PHASE_FOUR);
+						else if (events.IsInPhase(PHASE_FIVE))
+							events.ScheduleEvent(EVENT_FROSTSTORM_BOLT, 7000, 0, PHASE_FIVE);
 						break;
 					}
 
 					case EVENT_TOXIC_STORM:
 					{
-						if (Unit* target = SelectTarget(SelectAggroTarget::SELECT_TARGET_RANDOM, 0, 100.0f, true))
+						if (Unit* target = SelectTarget(SelectAggroTarget::SELECT_TARGET_RANDOM, 0, 40.0f, true))
 						{
 							me->CastSpell(target, SPELL_TOXIC_STORM);
 						}
-						events.ScheduleEvent(EVENT_TOXIC_STORM, 30000);
+
+						if (events.IsInPhase(PHASE_TWO))
+							events.ScheduleEvent(EVENT_TOXIC_STORM, 30000, 0, PHASE_TWO);
+						else if (events.IsInPhase(PHASE_THREE))
+							events.ScheduleEvent(EVENT_TOXIC_STORM, 30000, 0, PHASE_THREE);
+						else if (events.IsInPhase(PHASE_FOUR))
+							events.ScheduleEvent(EVENT_TOXIC_STORM, 30000, 0, PHASE_FOUR);
+						else if (events.IsInPhase(PHASE_FIVE))
+							events.ScheduleEvent(EVENT_TOXIC_STORM, 30000, 0, PHASE_FIVE);
 						break;
 					}
 
 					case EVENT_FOUL_GEYSER:
 					{
-						DoCast(me, SPELL_FOUL_GEYSER);
-						events.ScheduleEvent(EVENT_FOUL_GEYSER, 30000);
+						DoCastVictim(SPELL_FOUL_GEYSER);
+
+						if (events.IsInPhase(PHASE_THREE))
+							events.ScheduleEvent(EVENT_FOUL_GEYSER, 30000, 0, PHASE_THREE);
+						else if (events.IsInPhase(PHASE_FOUR))
+							events.ScheduleEvent(EVENT_FOUL_GEYSER, 30000, 0, PHASE_FOUR);
+						else if (events.IsInPhase(PHASE_FIVE))
+							events.ScheduleEvent(EVENT_FOUL_GEYSER, 30000, 0, PHASE_FIVE);
 						break;
 					}
-
+					/*
 					case EVENT_FALLING_ASH:
 					{
-						float posX = me->GetPositionX();
-						float posY = me->GetPositionY();
-						float posZ = me->GetPositionZ();
-						float O = me->GetOrientation();
+						DoCast(SPELL_FALLING_ASH);
 
-						Position pos = { urand(posX-30.0f, posX+30.0f), urand(posY-30.0f, posY+30.0f), posZ+15.0f, O };
-						me->SummonCreature(123, pos, TEMPSUMMON_MANUAL_DESPAWN);
-
-						events.ScheduleEvent(EVENT_FALLING_ASH, 30000);
+						if (events.IsInPhase(PHASE_FOUR))
+							events.ScheduleEvent(EVENT_FALLING_ASH, 30000, 0, PHASE_FOUR);
+						else if (events.IsInPhase(PHASE_FIVE))
+							events.ScheduleEvent(EVENT_FALLING_ASH, 30000, 0, PHASE_FIVE);
 						break;
 					}
-
+					*/
 					case EVENT_BLOODLUST:
 					{
 						DoCast(me, SPELL_BLOODLUST);
@@ -732,7 +949,22 @@ class boss_wavebinder_kardris : public CreatureScript
 
 					case EVENT_IRON_PRISON:
 					{
-						events.ScheduleEvent(EVENT_IRON_PRISON, 30000);
+						if (Unit* target = SelectTarget(SelectAggroTarget::SELECT_TARGET_RANDOM, 0, 40.0f, true))
+						{
+							me->CastSpell(target, SPELL_IRON_PRISON);
+						}
+						
+						if (events.IsInPhase(PHASE_ONE))
+							events.ScheduleEvent(EVENT_IRON_PRISON, 7000, 0, PHASE_ONE);
+						else if (events.IsInPhase(PHASE_TWO))
+							events.ScheduleEvent(EVENT_IRON_PRISON, 7000, 0, PHASE_TWO);
+						else if (events.IsInPhase(PHASE_THREE))
+							events.ScheduleEvent(EVENT_IRON_PRISON, 7000, 0, PHASE_THREE);
+						else if (events.IsInPhase(PHASE_FOUR))
+							events.ScheduleEvent(EVENT_IRON_PRISON, 7000, 0, PHASE_FOUR);
+						else if (events.IsInPhase(PHASE_FIVE))
+							events.ScheduleEvent(EVENT_IRON_PRISON, 7000, 0, PHASE_FIVE);
+
 						break;
 					}
 					default:
@@ -766,28 +998,14 @@ class npc_toxic_storm : public CreatureScript
 
 			void Reset() override
 			{
-				me->GetMotionMaster()->MoveRandom();
 				me->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NON_ATTACKABLE | UNIT_FLAG_NOT_SELECTABLE);
-				me->SetVisible(false);
+				me->SetVisible(true);
+				me->setFaction(16);
+				me->SetInCombatWithZone();
+				me->SetSpeed(MOVE_RUN, 0.05f, true);
+				me->ForcedDespawn(60000000);
 				events.Reset();
 				me->CastSpell(me, SPELL_TOXIC_STORM_VISUAL);
-				events.ScheduleEvent(EVENT_MOVE_RANDOM, 6000);
-			}
-
-			void UpdateAI(const uint32 diff)
-			{
-				switch (events.ExecuteEvent())
-				{
-					case EVENT_MOVE_RANDOM:
-					{
-						me->GetMotionMaster()->MoveRandom(50.0f);
-						events.ScheduleEvent(EVENT_MOVE_RANDOM, 6000);
-						break;
-					}
-
-					default:
-						break;
-				}
 			}
 		};
 
@@ -815,26 +1033,13 @@ class npc_toxic_tornado : public CreatureScript
 			void Reset() override
 			{
 				me->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NON_ATTACKABLE | UNIT_FLAG_NOT_SELECTABLE);
-				me->SetVisible(false);
+				me->SetVisible(true);
+				me->setFaction(16);
+				me->SetInCombatWithZone();
+				me->SetSpeed(MOVE_RUN, 0.05f, true);
+				me->ForcedDespawn(60000000);
 				events.Reset();
 				me->CastSpell(me, SPELL_TOXIC_TORNADO_VISUAL);
-				events.ScheduleEvent(EVENT_MOVE_RANDOM, 6000);
-			}
-
-			void UpdateAI(const uint32 diff)
-			{
-				switch (events.ExecuteEvent())
-				{
-					case EVENT_MOVE_RANDOM:
-					{
-						me->GetMotionMaster()->MoveRandom(50.0f);
-						events.ScheduleEvent(EVENT_MOVE_RANDOM, 6000);
-						break;
-					}
-
-					default:
-						break;
-				}
 			}
 		};
 
@@ -843,7 +1048,7 @@ class npc_toxic_tornado : public CreatureScript
 			return new npc_toxic_tornadoAI(creature);
 		}
 };
-
+/*
 // 71789 - Falling Ash
 class npc_falling_ash : public CreatureScript
 {
@@ -861,13 +1066,25 @@ class npc_falling_ash : public CreatureScript
 
 			void Reset() override
 			{
-				if (me->GetPositionZ() > FLOOR_Z)
-					me->GetMotionMaster()->MoveFall();
+				if (Creature* kardris = me->FindNearestCreature(BOSS_WAVEBINDER_KARDRIS, 500.0f, true))
+				{
+					if (me->GetPositionZ() > kardris->GetPositionZ())
+					{
+						float posX = kardris->GetPositionX();
+						float posY = kardris->GetPositionY();
+						float O = kardris->GetOrientation();
+						float posZ = kardris->GetPositionZ();
+						
+						Position pos = { urand(posX-15, posX+15), urand(posY-15, posY+15), posZ, O };
+						me->GetMotionMaster()->MoveLand(1, pos);
+					}
+				}
 
 				me->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NON_ATTACKABLE | UNIT_FLAG_NOT_SELECTABLE);
-				me->SetVisible(false);
+				me->SetVisible(true);
+				me->SetSpeed(MOVE_FLIGHT, 0.5f, true);
 				DoCast(me, SPELL_FALLING_ASH_VISUAL);
-				events.ScheduleEvent(EVENT_FALLING_ASH_DAMAGE, 14000);
+				events.ScheduleEvent(EVENT_FALLING_ASH_DAMAGE, 10000);
 				events.ScheduleEvent(EVENT_FALLING_CHECK, 1000);
 			}
 
@@ -875,22 +1092,37 @@ class npc_falling_ash : public CreatureScript
 			{
 				switch (events.ExecuteEvent())
 				{
+					events.Update(diff);
+
 					case EVENT_FALLING_ASH_DAMAGE:
 					{
-						if (me->GetPositionZ() <= FLOOR_Z)
+						if (Creature* kardris = me->FindNearestCreature(BOSS_WAVEBINDER_KARDRIS, 500.0f, true))
 						{
-							DoCast(me, SPELL_FALLING_ASH_EXPLOSION);
-							me->DespawnOrUnsummon(1);
-							break;
+							if (me->GetPositionZ() <= kardris->GetPositionZ())
+							{
+								DoCast(me, SPELL_FALLING_ASH_EXPLOSION);
+								me->DespawnOrUnsummon(1);
+							}
 						}
-						else
-							break;
+						
+						break;
 					}
 
 					case EVENT_FALLING_CHECK:
 					{
-						if (me->GetPositionZ() > FLOOR_Z)
-							me->GetMotionMaster()->MoveFall();
+						if (Creature* kardris = me->FindNearestCreature(BOSS_WAVEBINDER_KARDRIS, 500.0f, true))
+						{
+							if (me->GetPositionZ() > kardris->GetPositionZ())
+							{
+								float posX = kardris->GetPositionX();
+								float posY = kardris->GetPositionY();
+								float O = kardris->GetOrientation();
+								float posZ = kardris->GetPositionZ();
+
+								Position pos = { urand(posX - 15, posX + 15), urand(posY - 15, posY + 15), posZ, O };
+								me->GetMotionMaster()->MoveLand(1, pos);
+							}
+						}
 
 						events.ScheduleEvent(EVENT_FALLING_CHECK, 1000);
 						break;
@@ -907,7 +1139,7 @@ class npc_falling_ash : public CreatureScript
 			return new npc_falling_ashAI(creature);
 		}
 };
-
+*/
 // 71827 - Ash Elemental
 class npc_ash_elemental : public CreatureScript
 {
@@ -929,10 +1161,12 @@ class npc_ash_elemental : public CreatureScript
 				me->SetFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NON_ATTACKABLE | UNIT_FLAG_DISABLE_MOVE | UNIT_FLAG_NOT_SELECTABLE);
 				me->AddUnitMovementFlag(MOVEMENTFLAG_ROOT);
 				me->SetInCombatWithZone();
+				me->setFaction(16);
 			}
 
 			void UpdateAI(const uint32 diff)
 			{
+				events.Update(diff);
 				DoMeleeAttackIfReady();
 			}
 		};
@@ -976,11 +1210,15 @@ class npc_foul_slime : public CreatureScript
 						break;
 				}
 
+				me->SetReactState(ReactStates::REACT_AGGRESSIVE);
+				me->setFaction(16);
+
 				DoCast(me, SPELL_FOULNESS);
 			}
 
 			void UpdateAI(const uint32 diff)
 			{
+				events.Update(diff);
 				DoMeleeAttackIfReady();
 			}
 		};
@@ -1024,11 +1262,8 @@ class npc_darkfang_and_bloodclaw : public CreatureScript
 						break;
 				}
 				me->setFaction(16);
+				me->SetReactState(ReactStates::REACT_AGGRESSIVE);
 				events.Reset();
-			}
-
-			void EnterCombat()
-			{
 				events.ScheduleEvent(EVENT_SWIPE, urand(5000, 10000));
 				events.ScheduleEvent(EVENT_REND, urand(5000, 10000));
 			}
@@ -1040,6 +1275,8 @@ class npc_darkfang_and_bloodclaw : public CreatureScript
 
 				if (me->HasUnitState(UNIT_STATE_CASTING))
 					return;
+
+				events.Update(diff);
 
 				switch (events.ExecuteEvent())
 				{
@@ -1125,151 +1362,75 @@ class spell_toxic_mist : public SpellScriptLoader
 		}
 };
 
-// 144215 - Froststorm Strike
-class spell_froststorm_strike : public SpellScriptLoader
+// 144331 - Iron Prison
+class spell_iron_prison : public SpellScriptLoader
 {
 	public:
-		spell_froststorm_strike() : SpellScriptLoader("spell_froststorm_strike") { }
+		spell_iron_prison() : SpellScriptLoader("spell_iron_prison") { }
 
-		class spell_froststorm_strike_SpellScript : public SpellScript
+		class spell_iron_prison_SpellScript : public SpellScript
 		{
-			PrepareSpellScript(spell_froststorm_strike_SpellScript);
+			PrepareSpellScript(spell_iron_prison_SpellScript);
 
 			void HandleOnHit()
 			{
-				if (Unit* target = GetHitUnit())
-					if (target->GetTypeId() == TYPEID_PLAYER)
-						SetHitDamage(300000);
-			}
 
-			void Register()
-			{
-				OnHit += SpellHitFn(spell_froststorm_strike_SpellScript::HandleOnHit);
-			}
-		};
-
-		SpellScript* GetSpellScript() const
-		{
-			return new spell_froststorm_strike_SpellScript();
-		}
-};
-
-// 144214 - Froststorm Bolt
-class spell_froststorm_bolt : public SpellScriptLoader
-{
-	public:
-		spell_froststorm_bolt() : SpellScriptLoader("spell_froststorm_bolt") { }
-
-		class spell_froststorm_bolt_SpellScript : public SpellScript
-		{
-			PrepareSpellScript(spell_froststorm_bolt_SpellScript);
-
-			void HandleOnHit()
-			{
-				if (Unit* target = GetHitUnit())
-					if (target->GetTypeId() == TYPEID_PLAYER)
-						SetHitDamage(400000);
-			}
-
-			void Register()
-			{
-				OnHit += SpellHitFn(spell_froststorm_bolt_SpellScript::HandleOnHit);
-			}
-		};
-
-		SpellScript* GetSpellScript() const
-		{
-			return new spell_froststorm_bolt_SpellScript();
-		}
-};
-
-// 144090 - Foul Stream
-class spell_foul_stream : public SpellScriptLoader
-{
-	public:
-		spell_foul_stream() : SpellScriptLoader("spell_foul_stream") { }
-
-		class spell_foul_stream_SpellScript : public SpellScript
-		{
-			PrepareSpellScript(spell_foul_stream_SpellScript);
-
-			void HandleOnHit()
-			{
-				if (Unit* target = GetHitUnit())
-					if (target->GetTypeId() == TYPEID_PLAYER)
-						SetHitDamage(300000);
-			}
-
-			void Register()
-			{
-				OnHit += SpellHitFn(spell_foul_stream_SpellScript::HandleOnHit);
-			}
-		};
-
-		SpellScript* GetSpellScript() const
-		{
-			return new spell_foul_stream_SpellScript();
-		}
-};
-
-// 144066 - Foulness
-class spell_foulness : public SpellScriptLoader
-{
-	public:
-		spell_foulness() : SpellScriptLoader("spell_foulness") { }
-
-		class spell_foulness_SpellScript : public SpellScript
-		{
-			PrepareSpellScript(spell_foulness_SpellScript);
-
-			void HandleOnHit()
-			{
-				if (Unit* target = GetHitUnit())
-					if (target->GetTypeId() == TYPEID_PLAYER)
-						SetHitDamage(300000);
-			}
-
-			void Register()
-			{
-				OnHit += SpellHitFn(spell_foulness_SpellScript::HandleOnHit);
-			}
-		};
-
-		SpellScript* GetSpellScript() const
-		{
-			return new spell_foulness_SpellScript();
-		}
-};
-
-// 144017 - Toxic Storm
-class spell_toxic_storm : public SpellScriptLoader
-{
-	public:
-		spell_toxic_storm() : SpellScriptLoader("spell_toxic_storm") { }
-
-		class spell_toxic_storm_SpellScript : public SpellScript
-		{
-			PrepareSpellScript(spell_toxic_storm_SpellScript);
-
-			void HandleOnHit()
-			{
 				if (Unit* target = GetHitUnit())
 				{
-					if (target->GetTypeId() == TYPEID_PLAYER)
-						SetHitDamage(300000);
+					uint32 damage = target->GetHealth();
 
-					if (Unit* caster = GetCaster())
-						caster->CastSpell(target, SPELL_TOXIC_TORNADO);
+					if (target->GetTypeId() == TYPEID_PLAYER)
+						SetHitDamage(damage);
 				}
 			}
 
 			void Register()
 			{
-				OnHit += SpellHitFn(spell_toxic_storm_SpellScript::HandleOnHit);
+				OnHit += SpellHitFn(spell_iron_prison_SpellScript::HandleOnHit);
+			}
+		};
+
+		SpellScript* GetSpellScript() const
+		{
+			return new spell_iron_prison_SpellScript();
+		}
+};
+
+// 144334 - Iron Tomb
+class spell_iron_tomb : public SpellScriptLoader
+{
+	public:
+		spell_iron_tomb() : SpellScriptLoader("spell_iron_tomb") { }
+
+		class spell_iron_tomb_SpellScript : public SpellScript
+		{
+			PrepareSpellScript(spell_iron_tomb_SpellScript);
+
+			void HandleOnCast()
+			{
+				if (Unit* caster = GetCaster())
+					if (Unit* target = GetHitUnit())
+					{
+						float posX = target->GetPositionX();
+						float posY = target->GetPositionY();
+						float posZ = target->GetPositionZ();
+						float angl = target->GetOrientation();
+
+						caster->SummonGameObject(GOBJECT_IRON_TOMB, posX, posY, posZ, angl, 0, 0, 0, 0, TEMPSUMMON_MANUAL_DESPAWN);
+					}
+			}
+
+			void Register()
+			{
+				OnCast += SpellCastFn(spell_iron_tomb_SpellScript::HandleOnCast);
+			}
+
+			SpellScript* GetSpellScript() const
+			{
+				return new spell_iron_tomb_SpellScript();
 			}
 		};
 };
-
 
 void AddSC_boss_dark_shaman()
 {
@@ -1280,7 +1441,7 @@ void AddSC_boss_dark_shaman()
 	// Creatures
 	new npc_toxic_storm();
 	new npc_toxic_tornado();
-	new npc_falling_ash();
+	// new npc_falling_ash();
 	new npc_ash_elemental();
 	new npc_foul_slime();
 	new npc_darkfang_and_bloodclaw();
@@ -1288,9 +1449,6 @@ void AddSC_boss_dark_shaman()
 
 	// Spells
 	new spell_toxic_mist();
-	new spell_froststorm_strike();
-	new spell_froststorm_bolt();
-	new spell_foul_stream();
-	new spell_foulness();
-	new spell_toxic_storm();
+	new spell_iron_prison();
+	new spell_iron_tomb();
 }
