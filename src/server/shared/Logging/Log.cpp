@@ -34,7 +34,7 @@ Log::Log() : worker(NULL)
     SetRealmID(0);
     m_logsTimestamp = "_" + GetTimestampStr();
     LoadFromConfig();
-    pandashanLog = fopen("pandashan.log", "a");
+    pandashanLog = fopen(std::string(m_logsDir).append("pandashan.log").c_str(), "a");
 }
 
 Log::~Log()
@@ -42,7 +42,6 @@ Log::~Log()
     Close();
 
     fclose(pandashanLog);
-    delete pandashanLog;
     pandashanLog = NULL;
 }
 
