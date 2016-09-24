@@ -232,7 +232,7 @@ void Log::CreateLoggerFromConfig(const char* name)
             //fprintf(stdout, "Log::CreateLoggerFromConfig: Added Appender %s to Logger %s\n", appender->getName().c_str(), name); // DEBUG - RemoveMe
         }
         else
-            fprintf(stderr, "Error while configuring Appender %s in Logger %s. Appender does not exist", str.c_str(), name);
+            fprintf(stderr, "Error while configuring Appender %s in Logger %s. Appender does not exist\n", str.c_str(), name);
         ss >> str;
     }
 }
