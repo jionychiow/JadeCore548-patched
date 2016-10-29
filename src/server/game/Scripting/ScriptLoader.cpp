@@ -1049,6 +1049,8 @@ void AddSC_norushen();
 void AddSC_sha_of_pride();
 void AddSC_boss_iron_juggernaut();
 void AddSC_boss_dark_shaman();
+void AddSC_boss_general_nazgrim();
+void AddSC_boss_malkorok();
 void AddSC_garrosh_hellscream();
 #endif
 
@@ -2068,10 +2070,12 @@ void AddPandarieScripts()
 	AddSC_immersus();
 	AddSC_fallen_protectors();
 	AddSC_norushen();
-	AddSC_garrosh_hellscream();
 	AddSC_sha_of_pride();
 	AddSC_boss_iron_juggernaut();
 	AddSC_boss_dark_shaman();
+	AddSC_boss_general_nazgrim();
+	AddSC_boss_malkorok();
+	AddSC_garrosh_hellscream();
 
 #endif
 }

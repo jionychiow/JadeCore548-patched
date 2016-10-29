@@ -35,7 +35,6 @@
     - Need to rewrite Norushen
     - Need to finish Galakras script
     - Need to finish Iron Juggernaut script
-    - Need to add script for General Nazgrim
     - Need to add script for Malkorok
     - Need to add script for Spoils of Pandaria
     - Need to add script for Thok the Bloodthirsty
@@ -82,13 +81,21 @@ Pandaria Raids:
 -- Terrace of Endless Spring
 -- Throne of Thunder
 
-Classic Raids:
-
--- Ruins of Ahn'Qiraj
--- Temple of Ahn'Qiraj
-
 The Maelstrom Zones:
 
--- Deepholm
 -- The Lost Isles
 -- The Wandering Isle
+
+Mists of Pandaria Start Zones Quests ( 1-5 lvl ) TODO:
+
+-- Dwarf
+-- Undead
+-- Night Elf
+-- Tauren
+-- Gnome
+-- Troll
+-- Draenei
+-- Blood Elf
+-- Worgen
+-- Goblin
+-- Pandaren

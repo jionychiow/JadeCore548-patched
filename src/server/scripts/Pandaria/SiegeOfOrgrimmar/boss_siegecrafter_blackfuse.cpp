@@ -8,10 +8,26 @@ enum eSpells
     SPELL_OVERCHARGE                  = 145774,
     SPELL_LAUNCH_SAWBLADE             = 143265,
     SPELL_PROTECTIVE_FRENZY           = 145365
+    //Automated Shredder
+    SPELL_OVERLOAD                    = 145444,
+    SPELL_DEATH_FROM_ABOVE            = 144208
 };
 
 enum eEvents
 {
+    EVENT_ELECTROSTATIC_CHARGE = 1,
+    EVENT_OVERCHARGE           = 2,
+    EVENT_LAUNCH_SAWBLADE      = 3,
+    EVENT_PROTECTIVE_FRENZY    = 4,
+    EVENT_AUTOMATED_SHREDDER   = 5,
+    //Automated Shredder
+    EVENT_OVERLOAD             = 6,
+    EVENT_DEATH_FROM_ABOVE     = 7
+};
+
+enum eCreature
+{
+    CREATURE_AUTOMATED_SHREDDER = 71591
 };
 
 enum eSays
@@ -80,6 +96,9 @@ class boss_siegecrafter_blackfuse : public CreatureScript
                     pInstance->SendEncounterUnit(ENCOUNTER_FRAME_ENGAGE, me);
                     pInstance->SetBossState(DATA_SIEGECRAFTER_BLACKFUSE, IN_PROGRESS);
                 }
+                DoCastVictim(SPELL_ELECTROSTATIC_CHARGE);
+                events.ScheduleEvent(EVENT_ELECTROSTATIC_CHARGE, urand(17000, 22000));
+                events.ScheduleEvent(EVENT_LAUNCH_SAWBLADE, 7000);
             }
 			
 			void JustSummoned(Creature* summon)
@@ -112,12 +131,33 @@ class boss_siegecrafter_blackfuse : public CreatureScript
                 if (!UpdateVictim())
                     return;
 
-                if (me->HasUnitState(UNIT_STATE_CASTING))
-                    return;
-
                 events.Update(diff);
-			}
-		};
+                    while (uint32 eventId = events.ExecuteEvent())
+                    {
+                        switch (eventId)
+                        {
+                        case EVENT_ELECTROSTATIC_CHARGE:
+                        {
+                            DoCastVictim(SPELL_ELECTROSTATIC_CHARGE);
+                            events.ScheduleEvent(EVENT_ELECTROSTATIC_CHARGE, urand(17000, 22000));
+                        }
+                        case EVENT_LAUNCH_SAWBLADE:
+                        {
+                            if (Unit* target = SelectTarget(SELECT_TARGET_RANDOM))
+                            me->CastSpell(target, SPELL_LAUNCH_SAWBLADE);
+                            events.ScheduleEvent(EVENT_LAUNCH_SAWBLADE, urand(10000, 15000));
+                        }
+                        case EVENT_AUTOMATED_SHREDDER:
+                        {
+                            me->SummonCreature(CREATURE_AUTOMATED_SHREDDER, me->GetPositionX(), me->GetPositionY(), me->GetPositionZ(), 0, TEMPSUMMON_TIMED_DESPAWN_OUT_OF_COMBAT, 5000);
+                        }
+                        default:
+                            break;
+                    }
+            }
+        DoMeleeAttackIfReady();
+        }
+};
 
         CreatureAI* GetAI(Creature* pCreature) const
 		{
@@ -145,10 +185,36 @@ class mob_automated_shredder : public CreatureScript
 				events.Reset();
 			}
 
+			void EnterCombat(Unit* attacker)
+			{
+				events.ScheduleEvent(EVENT_OVERLOAD, urand(2000, 5000));
+				events.ScheduleEvent(EVENT_DEATH_FROM_ABOVE, 12000);
+			}
+
 			void UpdateAI(const uint32 diff)
 			{
 				if (!UpdateVictim())
 					return;
+
+				events.Update(diff);
+				while (uint32 eventId = events.ExecuteEvent())
+				{
+					switch (eventId)
+					{
+					case EVENT_OVERLOAD:
+					{
+						DoCastVictim(SPELL_OVERLOAD);
+						events.ScheduleEvent(EVENT_ELECTROSTATIC_CHARGE, urand(4000, 6000));
+					}
+					case EVENT_DEATH_FROM_ABOVE:
+					{
+						DoCastVictim(SPELL_DEATH_FROM_ABOVE);
+					}
+					default:
+						break;
+					}
+				}
+				DoMeleeAttackIfReady();
 			}
 		};
 		
